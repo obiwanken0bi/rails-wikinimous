@@ -1,14 +1,19 @@
-<h1><%= @article.title %></h1>
+<div class="col-10 m-auto">
+  <div class="title-buttons">
+    <h1><%= @article.title %></h1>
 
-<hr>
+    <%= link_to edit_article_path do %>
+      <i class="fas fa-pencil-alt"></i>
+    <% end %>
 
-<p><%= @article.content %></p>
+    <%= link_to article_path(@article),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do %>
+      <i class="far fa-trash-alt"></i>
+    <% end %>
+  </div>
 
-<%= link_to "Edit", edit_article_path %>
+  <hr>
 
-<%= link_to "Delete",
-            article_path(@article),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-
-<%= link_to "Back", articles_path %>
+  <p class="article-content"><%= @article.content %></p>
+</div>

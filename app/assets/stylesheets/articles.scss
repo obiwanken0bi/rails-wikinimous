@@ -1,3 +1,54 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Index
+#articles-list {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  a {
+    color: #337ab7;
+
+    &:hover {
+      color: #063761;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Show
+.title-buttons {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin-right: 12px;
+  }
+
+  .far, .fas {
+    font-size: 1.5em;
+    color: #337ab7;
+    margin-left: 16px;
+  
+    &:hover {
+      color: #063761;
+    }
+  }
+}
+
+.article-content {
+  margin-top: 24px;
+}
+
+// New & edit
+.simple_form {
+  margin-bottom: 16px;
+}

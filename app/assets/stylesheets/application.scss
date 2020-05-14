@@ -1,3 +1,12 @@
 @import "bootstrap/scss/bootstrap";
 
-@import "articles"
+@import "articles";
+@import "navbar";
+
+* {
+  color: #333333;
+}
+
+a:focus {
+  outline: none;
+}
